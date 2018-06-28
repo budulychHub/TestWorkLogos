@@ -1,0 +1,40 @@
+<!--
+<button ng-click="go = !go">menu</button>
+
+<div class="show" ng-show="go">
+   <img src="" alt="">
+   <ul>
+       <li><a href="#/home">Головна</a></li>
+       <li><a href="#/acount">Акаунт</a></li>
+       <li><a href="#/history">Історія</a></li>
+       <li><a href="#/statistic">Статистика</a></li>
+   </ul>
+    <button>log out</button>
+</div>
+
+<ul>
+    <li>Total budget {{count}}</li>
+    <li>Incomes {{count2}}</li>
+    <li>Expence {{count3}}</li>
+    <li>Balans {{count4}}</li>
+</ul>-->
+
+<div class="budget__block">
+    <input disabled value="Total budget: {{count}} $">
+    <input disabled value="Incomes: {{count2}} $">
+    <input disabled value="Expence: {{count3}} $">
+    <input disabled value="Balans: {{count4}} $">
+</div>
+
+<input ng-click="go = !go" type="button" class="button4" value="Menu">
+
+<div class="show" ng-show="go">
+    <div class="menu__block">
+        <img src="" alt="">
+        <a href="#/home" ng-click="go = !go" class="button9">Головна</a>
+        <a href="#/acount" ng-click="go = !go" class="button9">Акаунт</a>
+        <a href="#/history" ng-click="go = !go" class="button9">Історія</a>
+        <a href="#/statistic" ng-click="go = !go" class="button9">Статистика</a>
+        <button class="button1">log out</button>
+    </div>
+</div>

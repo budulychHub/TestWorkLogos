@@ -1,0 +1,60 @@
+<br>
+<button class="but_test addIncome" ng-click="show_income = !show_income">add income</button>
+<br>
+<div class="home">
+    <div class="popup__overlay" ng-show="show_income" ng-click="show_income=!show_income"></div>
+<div class="popup" ng-show="show_income">
+  <a href="#" class="popup__close" ng-click="show_income=!show_income">X</a>
+   <form action="" id="form_incomes">
+
+   <select class="text_field" ng-model="home.savesSelected" ng-change="home.changedSave(home.savesSelected)" 
+     data-ng-options="save as save._name for save in home.saves">
+    <option value="" selected disabled>choose save</option>
+</select>
+    <input type="number" class="text_field popup_field" placeholder="how much" ng-model="home.sum_income">
+    <input type="text" class="text_field popup_field" placeholder="comment" ng-model="home.income_comment">
+
+   <select class="text_field" ng-model="home.sourcesSelected" ng-change="home.changedSource(home.sourcesSelected)" 
+     data-ng-options="source as source.sources_name for source in home.sources">
+    <option value="" selected disabled>choose source</option>
+</select>
+    <br>
+    <button class="but_test popup_button" ng-click="show_income = !show_income; home.addIncome()">ok</button>
+    <button class="but_test popup_button" ng-click="show_income = !show_income">cancel</button>
+    </form>
+</div>
+<!--    </div>-->
+<br>
+<br>
+<div class="saves"  ng-repeat='item in home.saves'>
+    <div class="item_saves">
+    <button class="but_test" class="saves_name">{{item._name}}<span class="saves_balans"> {{item.balans}}</span></button>
+    </div>
+</div>
+<br><br>
+
+
+
+<div class="catExpence">
+    <div class="item_catExpence" ng-repeat='item in home.catExpence'>
+    <button class="but_test" class="catExpence_name" ng-click="$parent.collapsed=!$parent.collapsed;home.save_catExpence(item.id)">{{item._name}}</button>
+    </div>
+</div>
+<br>
+    <div class="popup__overlay" ng-show="collapsed" ng-click="collapsed=!collapsed"></div>
+<div class="popup2" ng-show="collapsed">
+ <a href="#" class="popup__close" ng-click="collapsed=!collapsed">X</a>
+  <form action="" id="form_expence">
+
+    <select class="text_field" ng-model="home.savesSelected" ng-change="home.changedSaveExpence(home.savesSelected)" 
+     data-ng-options="save as save._name for save in home.saves">
+    <option value="" selected disabled>choose save</option>
+</select>
+    <input class="text_field popup_field" type="number" placeholder="how much" ng-model="home.sum_expence">
+    <input class="text_field popup_field" type="text" placeholder="description" ng-model="home.description_expence">
+    <br>
+    <button class="but_test popup_button" ng-click="collapsed=!collapsed; home.addExpence()">ok</button>
+    <button class="but_test popup_button" ng-click="collapsed=!collapsed">cancel</button>
+    </form>
+</div>
+</div>

@@ -1,0 +1,69 @@
+<div class="user_information">
+   <span class="user_name"> name: {{acount.user.name}}</span>
+   <br>
+   <span class="user_name">sname: {{acount.user.sname}}</span>
+</div>
+		<div class="acount">
+        <div class="acount_saves">
+        <input type="text" class="text_field addField" placeholder="name of the save" ng-model='acount.add_save_name'>
+           <button class="but_test addButton" ng-click='acount.add_save()'>Add</button>
+           <h3>Table of the saves</h3>
+       
+              <table>
+                   <thead>
+                    <th>Name</th>
+                      <th>Edit</th>
+                       <th>Delete</th>
+                   </thead>
+    <tbody>
+    
+    <tr ng-repeat='item in acount.saves'>
+    <td>{{item._name}}</td>
+   
+    <td><button class="but_test" ng-click='acount.edit_save(item); $parent.show_edit_save = !$parent.show_edit_save'>edit</button></td>
+    <td><button class="but_test" ng-click='acount.remove_save(item.id)'>delete</button></td>
+    </tr>
+    
+    </tbody>      
+</table>
+          <div class="popup__overlay" ng-show="show_edit_save" ng-click="show_edit_save=!show_edit_save"></div>
+           <div class="popup3" ng-show="show_edit_save">
+             <a href="" class="popup__close" ng-click="show_edit_save=!show_edit_save">X</a>
+              <input type="text" class="text_field popup_field" placeholder="change name" ng-model='acount.change_save._name'> <br>
+             <button class="but_test popup_button btn_change" ng-click='acount.change_save_func(); show_edit_save = !show_edit_save'>Change</button> 
+           </div>
+            </div>
+       
+       
+
+<div class="acount_catExpence">
+        <input type="text" class="text_field addField" placeholder="name of the catExpence" ng-model='acount.add_catExpence_name'>
+           <button class="but_test addButton" ng-click='acount.add_catExpence()'>Add</button>
+           <h3>Table of the catExpence</h3>
+       
+              <table>
+                   <thead>
+                    <th>Name</th>
+                      <th>Edit</th>
+                       <th>Delete</th>
+                   </thead>
+    <tbody>
+    
+    <tr ng-repeat='item in acount.catExpence'>
+    <td>{{item._name}}</td>
+   
+    <td><button class="but_test"  ng-click='acount.edit_catExpence(item); $parent.show_edit_catExpence = !$parent.show_edit_catExpence'>edit</button></td>
+    <td><button class="but_test" ng-click='acount.remove_catExpence(item.id)'>delete</button></td>
+    </tr>
+    
+    </tbody>      
+</table>
+          <div class="popup__overlay" ng-show="show_edit_catExpence" ng-click="show_edit_catExpence=!show_edit_catExpence"></div>
+           <div class="popup3" ng-show="show_edit_catExpence">
+             <a href="" class="popup__close" ng-click="show_edit_catExpence=!show_edit_catExpence">X</a>
+              <input type="text" class="text_field popup_field" placeholder="change name" ng-model='acount.change_catExpence._name'> 
+             <button class="but_test popup_button btn_change" ng-click='acount.change_catExpence_func(); show_edit_catExpence = !show_edit_catExpence'>Change</button> 
+           </div>
+            </div>
+            <br><br>
+            </div>

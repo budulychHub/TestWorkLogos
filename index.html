@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<!--   <script src="angular.min.js"></script>-->
+   
+   <link rel="stylesheet" href="styles/styles.css">
+<!--      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />-->
+
+</head>
+<body ng-app='App' ng-controller='mainCtrl as main'>
+<div>
+    {{date}}<br/> 
+</div>
+    <header my-header count='totalBudget2' count2='incomes2' count3='expence2' count4='balans2'>      
+   </header>
+    
+    <ng-view></ng-view>
+    
+    
+    
+    
+    <script src="js/app.js"></script>
+    <script src="js/app-controller.js"></script>
+    <script src="js/router.js"></script>
+    
+    <script src="js/services/userService.js"></script>
+    
+    <script src="js/controllers/home.js"></script>
+    <script src="js/controllers/acount.js"></script>
+    <script src="js/controllers/history.js"></script>
+    <script src="js/controllers/statistic.js"></script>
+    <script src="js/controllers/loginCtrl.js"></script>
+    <script src="js/controllers/registrationCtrl.js"></script>
+    
+    
+    <script src="js/directives/header.js"></script>
+    
+</body>
+</html>
